@@ -1,5 +1,6 @@
 package scenarios;
 
+import static org.testng.AssertJUnit.assertTrue;
 import static pageObjects.NativePageObject.signIn;
 import static pageObjects.NativePageObject.signUp;
 
@@ -17,7 +18,7 @@ public class nativeMobileTests extends BaseTest {
         signUp(email, username, password);
         signIn(email, password);
 
-        assert getPo().getWebElement("addExpenseButton").isDisplayed();
+        assertTrue(getPo().getWebElement("addExpenseButton").isDisplayed());
 
         System.out.println("Android native test is done");
     }

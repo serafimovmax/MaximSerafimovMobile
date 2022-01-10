@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Native mobile Test Suite">
+  <parameter name="appType" value="native"/>
+  <parameter name="udid" value="3e50758dd2e1179a014ee7b51dc4285d73118107"/>
+  <parameter name="platformName" value="iOS"/>
+  <parameter name="bundleId" value="com.epam.EPAMTestApp.ii"/>
+  <parameter name="descriptionPage" value="Budget"/>
+  <parameter name="email" value="maxim1@me.com"/>
+  <parameter name="username" value="maxim"/>
+  <parameter name="password" value="12345678"/>
+  <test name="Cloud Native tests">
+    <groups>
+      <run>
+        <include name="native"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="com.epam.scenarios"/>
+    </packages>
+  </test>
+</suite>

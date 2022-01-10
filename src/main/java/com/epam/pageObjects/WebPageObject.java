@@ -1,7 +1,7 @@
-package pageObjects;
+package com.epam.pageObjects;
 
-import static setup.BaseTest.getPo;
-import static setup.BaseTest.getWebDriverWait;
+import static com.epam.setup.BaseTest.getPo;
+import static com.epam.setup.BaseTest.getWebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WebPageObject  {
 
-    @FindBy(xpath = "//input[@name='q']")
+    @FindBy(xpath = "//div[1]/input[1]")
     WebElement searchInputField;
-    @FindBy(xpath = "//*[@id='rso']/div")
+    @FindBy(xpath = "//span[text()='epam']")
     static List<WebElement> searchResultsList;
 
     public WebPageObject(AppiumDriver appiumDriver) {
@@ -37,5 +37,4 @@ public class WebPageObject  {
                           .map(WebElement::getText)
                           .collect(Collectors.toList());
     }
-
 }

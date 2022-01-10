@@ -1,4 +1,4 @@
-package setup;
+package com.epam.setup;
 
 import org.openqa.selenium.WebElement;
 
